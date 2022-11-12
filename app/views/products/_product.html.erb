@@ -1,0 +1,29 @@
+<div id="<%= dom_id product %>"
+<%if product.is_vegan%>
+style="background-color: green;"
+<%else%>
+style="background-color: red;"
+<%end%>
+>
+  <p>
+    <strong>Company:</strong>
+    <%= product.company_id %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= product.name %>
+  </p>
+
+  <p>
+    <strong>Is vegan:</strong>
+    <%= product.is_vegan %>
+  </p>
+  <%if product.is_vegan%>
+  <%=image_tag("frog.gif", width:"200px")%>
+  <%else%>
+  <%=image_tag("dont-think-this-is-vegan-not-vegan.gif", width:"200px")%>
+  <%end%>
+
+
+</div>
